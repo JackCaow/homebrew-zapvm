@@ -13,7 +13,8 @@ class Zapvm < Formula
   depends_on :macos
 
   resource "agent_computer_image" do
-    url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.2/zapvm-image_1.12.0-layered-rc7_arm64.bundle.tar.zst"
+    url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.2/zapvm-image_1.12.0-layered-rc7_arm64.bundle.tar.zst",
+        using: :nounzip
     sha256 "bd426b04eaa99d188e54add1813730d004588d179496d6c7808012677c01ba41"
   end
 
