@@ -44,9 +44,9 @@ class Zapvm < Formula
            "--arch", "arm64",
            "--smoke-binary", libexec/"zapvm"
 
-    bin.write_env_script libexec/"zapvm",
-                         ZAPVM_IMAGE_ROOT:       image_root,
-                         ZAPVM_IMAGE_PUBLIC_KEY: image_public_key
+    (bin/"zapvm").write_env_script libexec/"zapvm",
+                                     ZAPVM_IMAGE_ROOT:       image_root,
+                                     ZAPVM_IMAGE_PUBLIC_KEY: image_public_key
     bin.install_symlink libexec/"zapvm-node"
     bin.install_symlink libexec/"zapvm-image"
     bin.install_symlink libexec/"zapvm-sbom"
