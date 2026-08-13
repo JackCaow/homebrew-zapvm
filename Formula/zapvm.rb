@@ -6,7 +6,7 @@ class Zapvm < Formula
   homepage "https://github.com/JackCaow/homebrew-zapvm"
   url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.1/zapvm_0.3.0-beta.1_darwin_arm64.tar.gz"
   version "0.3.0-beta.1"
-  sha256 "7e503dc14e1de7e30f153663ba275bbadbbba681a129fb775cd51999f5124dc1"
+  sha256 "7dd0305a99f65e24dce1d0c364ec5088c65504c18092cd280b5ee545d4a938b9"
   license "Apache-2.0"
 
   depends_on arch: :arm64
