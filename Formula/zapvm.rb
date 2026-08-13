@@ -8,6 +8,7 @@ class Zapvm < Formula
   version "0.3.0-beta.2"
   sha256 "cf6160d39fb32114ecf022a9458599e74e2b22857b6a85d25dd9845cf5049775"
   license "Apache-2.0"
+  revision 1
 
   depends_on arch: :arm64
   depends_on :macos
@@ -43,6 +44,7 @@ class Zapvm < Formula
            "--public-key", image_public_key,
            "--arch", "arm64",
            "--smoke-binary", libexec/"zapvm"
+    image_bundle.unlink
 
     (bin/"zapvm").write_env_script libexec/"zapvm",
                                      ZAPVM_IMAGE_ROOT:       image_root,
