@@ -4,23 +4,21 @@
 class Zapvm < Formula
   desc "Ready-to-run Agent Computer VM for macOS"
   homepage "https://github.com/JackCaow/homebrew-zapvm"
-  url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.2/zapvm_0.3.0-beta.2_darwin_arm64.tar.gz"
-  version "0.3.0-beta.2"
-  sha256 "cf6160d39fb32114ecf022a9458599e74e2b22857b6a85d25dd9845cf5049775"
+  url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.3/zapvm_0.3.0-beta.3_darwin_arm64.tar.gz"
+  sha256 "5a420e7d56dcdcf0688e9a7f8ef13b1af40c87c1054c24ae8d840835c3b15173"
   license "Apache-2.0"
-  revision 1
 
   depends_on arch: :arm64
   depends_on :macos
 
   resource "agent_computer_image" do
-    url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.2/zapvm-image_1.12.0-layered-rc7_arm64.bundle.tar.zst",
+    url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.3/zapvm-image_1.12.0-layered-rc7_arm64.bundle.tar.zst",
         using: :nounzip
     sha256 "bd426b04eaa99d188e54add1813730d004588d179496d6c7808012677c01ba41"
   end
 
   resource "image_public_key" do
-    url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.2/zapvm-image-public.pem"
+    url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.3/zapvm-image-public.pem"
     sha256 "ad2d183b02e194d7538ab4c791bf594aa94c4b84308ea061713f91f0515bd66c"
   end
 
@@ -47,8 +45,8 @@ class Zapvm < Formula
     image_bundle.unlink
 
     (bin/"zapvm").write_env_script libexec/"zapvm",
-                                     ZAPVM_IMAGE_ROOT:       image_root,
-                                     ZAPVM_IMAGE_PUBLIC_KEY: image_public_key
+                                   ZAPVM_IMAGE_ROOT:       image_root,
+                                   ZAPVM_IMAGE_PUBLIC_KEY: image_public_key
     bin.install_symlink libexec/"zapvm-node"
     bin.install_symlink libexec/"zapvm-image"
     bin.install_symlink libexec/"zapvm-sbom"
