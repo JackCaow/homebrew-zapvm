@@ -4,8 +4,8 @@
 class Zapvm < Formula
   desc "Ready-to-run Agent Computer VM for macOS"
   homepage "https://github.com/JackCaow/homebrew-zapvm"
-  url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.3/zapvm_0.3.0-beta.3_darwin_arm64.tar.gz"
-  sha256 "5a420e7d56dcdcf0688e9a7f8ef13b1af40c87c1054c24ae8d840835c3b15173"
+  url "https://github.com/JackCaow/homebrew-zapvm/releases/download/v0.3.0-beta.4/zapvm_0.3.0-beta.4_darwin_arm64.tar.gz"
+  sha256 "188a4a200e14ed7042bec87d2f9403db2e786db40488864943fcecb0cb8ca563"
   license "Apache-2.0"
 
   depends_on arch: :arm64
